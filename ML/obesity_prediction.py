@@ -100,7 +100,7 @@ print(results[best_model])
 #creating the best model
 pipeline = Pipeline([
         ('preprocessor', preprocessor),
-        ('model', {best_model})
+        ('model', models[best_model])
     ])
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 pipeline.fit(X_train, y_train)
